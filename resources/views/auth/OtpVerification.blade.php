@@ -26,12 +26,43 @@
               @if (session('success'))
               <div class="text-green-500 font-bold">{{session('success')}}</div>
               @endif
+
+              @if (session('error'))
+              <div class="text-rose-500 font-bold">{{session('error')}}</div>
+              @endif
             </div>
           </div>
 
           <div>
             <form action="{{ route('otp.generate') }}" method="POST">
-              <div class="flex flex-col space-y-16">
+              @csrf
+
+               <div class="space-y-2">
+                <label for="code" class="block text-sm font-medium leading-5 text-gray-700">
+                  Code
+                </label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    value="{{ $user_id }}"
+                    name="user_id"
+                    type="hidden"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label for="otp" class="block text-sm font-medium leading-5 text-gray-700">
+                  OTP
+                </label>
+                <div class="mt-1 rounded-md shadow-sm">
+                  <input
+                    value="{{ old('otp') }}"
+                    name="otp"
+                    type="text"
+                    required
+                    placeholder="Enter OTP"
+                  />
+              <!-- <div class="flex flex-col space-y-16">
                 <div
                   class="flex flex-row items-center justify-between mx-auto w-full max-w-xs"
                 >
@@ -71,7 +102,11 @@
                       id=""
                     />
                   </div>
-                </div>
+                </div> -->
+
+                @error('otp')
+                    <span class="text-rose-500 font-bold">{{message}}</span>
+                @enderror
 
                 <div class="flex flex-col space-y-5">
                   <div>
