@@ -51,7 +51,33 @@
                                     class="flex flex-row items-center justify-between mx-auto w-full max-w-xs"
                                 >
                                     <div class="w-16 h-16">
-                                        <input required value="{{ old('otp') }}"
+                                        <input required 
+                                        value="{{ old('otp') }}"
+                                        maxlength="1"
+                                        class="w-full h-full flex flex-col
+                                        items-center justify-center text-center
+                                        px-5 outline-none rounded-xl border
+                                        border-rose-500 text-lg bg-white
+                                        focus:bg-gray-50 focus:ring-1
+                                        ring-rose-600" type="text" name="otp"
+                                        id="" />
+                                    </div>
+                                    <div class="w-16 h-16">
+                                        <input required 
+                                        value="{{ old('otp') }}"
+                                        maxlength="1"
+                                        class="w-full h-full flex flex-col
+                                        items-center justify-center text-center
+                                        px-5 outline-none rounded-xl border
+                                        border-rose-500 text-lg bg-white
+                                        focus:bg-gray-50 focus:ring-1
+                                        ring-rose-600" type="text" name="otp"
+                                        id="" />
+                                    </div>
+                                    <div class="w-16 h-16">
+                                        <input required 
+                                        value="{{ old('otp') }}"
+                                        maxlength="1"
                                         class="w-full h-full flex flex-col
                                         items-center justify-center text-center
                                         px-5 outline-none rounded-xl border
@@ -62,26 +88,7 @@
                                     </div>
                                     <div class="w-16 h-16">
                                         <input required value="{{ old('otp') }}"
-                                        class="w-full h-full flex flex-col
-                                        items-center justify-center text-center
-                                        px-5 outline-none rounded-xl border
-                                        border-rose-500 text-lg bg-white
-                                        focus:bg-gray-50 focus:ring-1
-                                        ring-rose-600" type="text" name="otp"
-                                        id="" />
-                                    </div>
-                                    <div class="w-16 h-16">
-                                        <input required value="{{ old('otp') }}"
-                                        class="w-full h-full flex flex-col
-                                        items-center justify-center text-center
-                                        px-5 outline-none rounded-xl border
-                                        border-rose-500 text-lg bg-white
-                                        focus:bg-gray-50 focus:ring-1
-                                        ring-rose-600" type="text" name="otp"
-                                        id="" />
-                                    </div>
-                                    <div class="w-16 h-16">
-                                        <input required value="{{ old('otp') }}"
+                                        maxlength="1"
                                         class="w-full h-full flex flex-col
                                         items-center justify-center text-center
                                         px-5 outline-none rounded-xl border

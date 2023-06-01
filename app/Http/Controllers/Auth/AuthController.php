@@ -23,7 +23,7 @@ class AuthController extends Controller
         $userOtp = $this->generateOTP($request->mobile_no);
         $userOtp->sendOTP($request->mobile_no);
 
-        return redirect()->route('otp.verification', ['user_id', $userOtp->user_id])
+        return redirect()->route('otp.verification',[$userOtp->user_id])
             ->with('success', 'OTP has been sent on your Mobile Number!');
     }
 
